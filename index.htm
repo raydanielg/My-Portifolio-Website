@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ezra Daniel Gyunda - Professional Web & Mobile Developer based in Mwanza, Tanzania. Specializing in modern websites, school management systems, e-commerce solutions, and custom software development. Contact me for your next project.">
+    <meta name="keywords" content="Web Developer Tanzania, Mobile App Developer Mwanza, School Management System, E-commerce Website, Software Developer, Website Design Tanzania">
+    <meta name="author" content="Ezra Daniel Gyunda">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com/">
+    <meta property="og:title" content="Ezra Daniel Gyunda | Professional Developer">
+    <meta property="og:description" content="Professional Web & Mobile Developer specializing in modern websites, school systems, and custom software solutions.">
+    <meta property="og:image" content="https://yourportfolio.com/images/preview.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourportfolio.com/">
+    <meta property="twitter:title" content="Ezra Daniel Gyunda | Professional Developer">
+    <meta property="twitter:description" content="Professional Web & Mobile Developer specializing in modern websites, school systems, and custom software solutions.">
+    <meta property="twitter:image" content="https://yourportfolio.com/images/preview.jpg">
+    
+    <title>Ezra Daniel Gyunda | Professional Web & Mobile Developer</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .skill-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .availability-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+        }
+        
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            border: none;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
+        }
+        
+        .whatsapp-btn-sm {
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid var(--secondary-color);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--secondary-color); }
+        }
+        
+        .bg-pattern {
+            background: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            background-color: #f8f9fa;
+        }
+        
+        .client-logo {
+            height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .price-tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .coming-soon {
+            background: #f39c12;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .price-range {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-color);">
+                <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Logo" width="30" height="30" class="d-inline-block align-top me-2">
+                Ezra Daniel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a href="https://wa.me/255742710054?text=Hello%20Ezra,%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20your%20services." class="whatsapp-btn whatsapp-btn-sm" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i> CHAT NOW
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+        <a href="https://wa.me/255742710054?text=Hello%20Ezra,%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20your%20services." class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp me-2"></i> Chat Now
+        </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 animate__animated animate__fadeInRight">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Developer Illustration" class="img-fluid floating" style="max-width: 300px;">
+                </div>
+                <div class="col-lg-6 order-lg-1 text-lg-start text-center animate__animated animate__fadeInLeft">
+                    <div class="typewriter mb-3">
+                        <h1 class="display-4 fw-bold">Ezra Daniel Gyunda</h1>
+                    </div>
+                    <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">Professional Web & Mobile Developer</p>
+                    <p class="mb-4 animate__animated animate__fadeInUp animate__delay-2s">Creating modern websites and school management systems with cutting-edge technology</p>
+                    <span class="availability-badge animate__animated animate__pulse animate__infinite animate__delay-3s">
+                        <i class="fas fa-clock me-2"></i>Available: Mon-Fri (24h response)
+                    </span>
+                    
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start mt-4">
+                        <a href="#projects" class="btn btn-primary btn-lg px-4 animate__animated animate__fadeInUp animate__delay-3s">
+                            <i class="fas fa-eye me-2"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg px-4 animate__animated animate__fadeInUp animate__delay-4s">
+                            <i class="fas fa-paper-plane me-2"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light bg-pattern">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="mine.png" alt="Ezra Daniel Gyunda" class="profile-img">
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="lead">Hello! I'm Ezra Daniel Gyunda, a professional developer based in Mwanza.</p>
+                    <p>With a passion for creating modern, responsive websites and efficient school management systems, I bring ideas to life through clean code and innovative solutions.</p>
+                    <p>My expertise spans across web development, mobile applications, and custom software solutions tailored to meet specific business needs.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> <strong>Location:</strong> Mwanza, P.O. Box 523</li>
+                                <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i> <strong>Email:</strong> airezra2@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> <strong>Phone:</strong> +255 742 710 054</li>
+                                <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i> <strong>Alt. Phone:</strong> +255 613 976 254</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center" data-aos="fade-up">My Skills & Services</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">I specialize in creating modern digital solutions that drive business growth</p>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-laptop-code text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Modern Websites</h4>
+                        </div>
+                        <p>I design and develop responsive, user-friendly websites that work perfectly on all devices using the latest web technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-school text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">School Systems</h4>
+                        </div>
+                        <p>Custom school management systems that streamline operations, from student registration to exam management and reporting.</p>
+                        <span class="price-tag">Price: $700 - $2,000</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-mobile-alt text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Mobile Apps</h4>
+                        </div>
+                        <p>Cross-platform mobile applications that provide seamless user experiences on both Android and iOS devices.</p>
+                        <span class="price-tag">Price: $1,000 - $5,000</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-database text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Database Solutions</h4>
+                        </div>
+                        <p>Efficient database design and implementation for optimal performance and data management.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-shopping-cart text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">E-commerce</h4>
+                        </div>
+                        <p>Online stores with secure payment gateways, inventory management, and customer relationship features.</p>
+                        <span class="price-tag">Price: $1,500 - $4,000</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 p-3 rounded me-3">
+                                <i class="fas fa-cloud text-primary fs-4"></i>
+                            </div>
+                            <h4 class="mb-0">Cloud Solutions</h4>
+                        </div>
+                        <p>Cloud-based applications and services for scalability, reliability, and remote accessibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title text-center" data-aos="fade-up">Featured Projects</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Some of the projects I've worked on for clients</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Amoleck Group LTD" class="project-img">
+                        <div class="p-4">
+                            <h4>Amoleck Group LTD</h4>
+                            <p>Developed a comprehensive business website showcasing their services and portfolio.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://amoleck.co.tz" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 1.5M - 3.5M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Amoleck Ecommerce" class="project-img">
+                        <div class="p-4">
+                            <h4>Amoleck Ecommerce</h4>
+                            <p>Online store with product management, cart system, and payment integration.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://shop.amoleck.co.tz" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 2.5M - 5M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="MIET" class="project-img">
+                        <div class="p-4">
+                            <h4>MIET College</h4>
+                            <p>Built an educational platform with student portal and management system for MIET.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://miet.ac.tz" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 3M - 6M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sheddys New Look" class="project-img">
+                        <div class="p-4">
+                            <h4>Sheddys New Look</h4>
+                            <p>Created a fashion company website with e-commerce capabilities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://sheddysnewlook.org" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 1.2M - 2.8M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Charity Foundation" class="project-img">
+                        <div class="p-4">
+                            <h4>Charity Foundation</h4>
+                            <p>Developed a donation platform for Sheddys New Look Charity Foundation.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://charity.sheddysnewlook.org" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 700K - 1.5M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Tafeed" class="project-img">
+                        <div class="p-4">
+                            <h4>Tafeed Government System</h4>
+                            <p>Implemented a government service platform with secure authentication.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://tafeed.co.tz" target="_blank" class="btn btn-sm btn-outline-primary">Visit Website</a>
+                                <span class="price-range">TZS 5M - 10M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Security System" class="project-img">
+                        <div class="p-4">
+                            <h4>Security System</h4>
+                            <p>Custom security management system with real-time monitoring capabilities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="https://github.com/raydanielg" target="_blank" class="btn btn-sm btn-outline-primary">View on GitHub</a>
+                                <span class="price-range">TZS 2M - 4M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="ICT Company" class="project-img">
+                        <div class="p-4">
+                            <h4>ICT Company</h4>
+                            <p>Comprehensive IT solutions provider website with service showcase.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="coming-soon">Coming Soon</span>
+                                <span class="price-range">TZS 1M - 2M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="SMS Gateway" class="project-img">
+                        <div class="p-4">
+                            <h4>SMS Gateway</h4>
+                            <p>Bulk SMS sending platform with API integration capabilities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="coming-soon">Coming Soon</span>
+                                <span class="price-range">TZS 3M - 6M</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/raydanielg" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-github me-2"></i> View More Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center" data-aos="fade-up">Trusted By</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">Some of the organizations I've worked with</p>
+            
+            <div class="row justify-content-center align-items-center g-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="amoleck.png" alt="Amoleck" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="miet.png" alt="MIET" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="sheddysnewlook.png" alt="Sheddys" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="tafeed.png" alt="Tafeed" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="security.png" alt="Government" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="img.png" alt="Local Bank" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="hosp.png" alt="Hospital" class="img-fluid client-logo">
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                    <img src="img2.png" alt="University" class="img-fluid client-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-pattern">
+        <div class="container py-5">
+            <h2 class="section-title text-center" data-aos="fade-up">Get In Touch</h2>
+            <p class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">I'm available for freelance work and collaborations. Feel free to reach out!</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="mb-4">Contact Information</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                        <strong>Address:</strong> Mwanza Ilemela, P.O. Box 523
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-phone text-primary me-2"></i>
+                                        <strong>Phone:</strong> +255 742 710 054
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-phone text-primary me-2"></i>
+                                        <strong>Alt. Phone:</strong> +255 613 976 254
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fas fa-envelope text-primary me-2"></i>
+                                        <strong>Email:</strong> airezra2@gmail.com
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="fab fa-github text-primary me-2"></i>
+                                        <strong>GitHub:</strong> github.com/raydanielg
+                                    </li>
+                                </ul>
+                                
+                                <div class="mt-4">
+                                    <h5>Connect with me:</h5>
+                                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://github.com/raydanielg" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <a href="https://wa.me/255742710054?text=Hello%20Ezra,%20I%20visited%20your%20portfolio%20and%20I'm%20interested%20in%20your%20services." class="whatsapp-btn whatsapp-btn-sm" target="_blank">
+                                        <i class="fab fa-whatsapp me-2"></i> CHAT ON WHATSAAP
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="mb-4">Send a Message</h4>
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Subject" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Logo" width="60" class="mb-3">
+                    <h3 class="mb-3">Ezra Daniel Gyunda</h3>
+                    <p class="mb-4">Professional Web & Mobile Developer</p>
+                    
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/raydanielg" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/255742710054" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> Ezra Daniel Gyunda. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Typewriter effect
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove typewriter animation after it completes
+            setTimeout(function() {
+                const typewriter = document.querySelector('.typewriter h1');
+                if (typewriter) {
+                    typewriter.style.borderRight = 'none';
+                    typewriter.style.animation = 'none';
+                }
+            }, 3500);
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Navbar background change on scroll
+            window.addEventListener('scroll', function() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    navbar.style.boxShadow = 'none';
+                }
+            });
+            
+            // Project card hover effect for price display
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const price = this.querySelector('.price-range');
+                    if (price) {
+                        price.style.opacity = '1';
+                        price.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const price = this.querySelector('.price-range');
+                    if (price) {
+                        price.style.opacity = '0.9';
+                        price.style.transform = 'translateY(5px)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
